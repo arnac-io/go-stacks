@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/cbadawi/go-stacks/stacks/logger"
+	"github.com/arnac-io/go-stacks/stacks/logger"
 )
 
 // PtrBool is a helper routine that returns a pointer to given boolean value.

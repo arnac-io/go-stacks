@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/cbadawi/go-stacks/stacks/models"
-	"github.com/cbadawi/go-stacks/stacks/utils"
+	"github.com/arnac-io/go-stacks/stacks/models"
+	"github.com/arnac-io/go-stacks/stacks/utils"
 )
 
 // FaucetsAPIService FaucetsAPI service
@@ -46,9 +46,8 @@ explorer. The tokens are delivered once the transaction has been included in a b
 
 **Note:** This is a testnet only endpoint. This endpoint will not work on the mainnet.
 
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiRunFaucetBtcRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiRunFaucetBtcRequest
 */
 func (a *FaucetsAPIService) RunFaucetBtc(ctx context.Context) ApiRunFaucetBtcRequest {
 	return ApiRunFaucetBtcRequest{
@@ -58,7 +57,8 @@ func (a *FaucetsAPIService) RunFaucetBtc(ctx context.Context) ApiRunFaucetBtcReq
 }
 
 // Execute executes the request
-//  @return RunFaucetResponse
+//
+//	@return RunFaucetResponse
 func (a *FaucetsAPIService) RunFaucetBtcExecute(r ApiRunFaucetBtcRequest) (*models.RunFaucetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
@@ -188,9 +188,8 @@ failed faucet transactions to a testnet address, you can get help in [Discord](h
 
 **Note:** This is a testnet only endpoint. This endpoint will not work on the mainnet.
 
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiRunFaucetStxRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiRunFaucetStxRequest
 */
 func (a *FaucetsAPIService) RunFaucetStx(ctx context.Context) ApiRunFaucetStxRequest {
 	return ApiRunFaucetStxRequest{
@@ -200,7 +199,8 @@ func (a *FaucetsAPIService) RunFaucetStx(ctx context.Context) ApiRunFaucetStxReq
 }
 
 // Execute executes the request
-//  @return RunFaucetResponse
+//
+//	@return RunFaucetResponse
 func (a *FaucetsAPIService) RunFaucetStxExecute(r ApiRunFaucetStxRequest) (*models.RunFaucetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost

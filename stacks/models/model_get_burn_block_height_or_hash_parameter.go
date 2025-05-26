@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/cbadawi/go-stacks/stacks/utils"
+	"github.com/arnac-io/go-stacks/stacks/utils"
 	validator "gopkg.in/validator.v2"
 )
 
