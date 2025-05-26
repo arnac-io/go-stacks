@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/cbadawi/go-stacks/stacks/utils"
+	"github.com/arnac-io/go-stacks/stacks/utils"
 )
 
 // checks if the AddressTransactionWithTransfers type satisfies the MappedNullable interface at compile time

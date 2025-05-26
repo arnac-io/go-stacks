@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/cbadawi/go-stacks/stacks/utils"
+	"github.com/arnac-io/go-stacks/stacks/utils"
 )
 
 // checks if the SmartContractTransaction type satisfies the MappedNullable interface at compile time
@@ -72,7 +72,7 @@ type SmartContractTransaction struct {
 	// Execution cost read length.
 	ExecutionCostReadLength int32 `json:"execution_cost_read_length"`
 	// Execution cost runtime.
-	ExecutionCostRuntime int32 `json:"execution_cost_runtime"`
+	ExecutionCostRuntime int64 `json:"execution_cost_runtime"`
 	// Execution cost write count.
 	ExecutionCostWriteCount int32 `json:"execution_cost_write_count"`
 	// Execution cost write length.
@@ -89,7 +89,7 @@ type _SmartContractTransaction SmartContractTransaction
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSmartContractTransaction(txId string, nonce int32, feeRate string, senderAddress string, sponsored bool, postConditionMode string, postConditions []PostCondition, anchorMode string, blockHash string, blockHeight int32, blockTime float32, blockTimeIso string, burnBlockHeight int32, burnBlockTime int32, burnBlockTimeIso string, parentBurnBlockTime int32, parentBurnBlockTimeIso string, canonical bool, txIndex int32, txStatus string, txResult AbstractTransactionAllOfTxResult, eventCount int32, parentBlockHash string, isUnanchored bool, microblockHash string, microblockSequence int32, microblockCanonical bool, executionCostReadCount int32, executionCostReadLength int32, executionCostRuntime int32, executionCostWriteCount int32, executionCostWriteLength int32, events []TransactionEvent, txType string, smartContract SmartContractTransactionMetadataSmartContract) *SmartContractTransaction {
+func NewSmartContractTransaction(txId string, nonce int32, feeRate string, senderAddress string, sponsored bool, postConditionMode string, postConditions []PostCondition, anchorMode string, blockHash string, blockHeight int32, blockTime float32, blockTimeIso string, burnBlockHeight int32, burnBlockTime int32, burnBlockTimeIso string, parentBurnBlockTime int32, parentBurnBlockTimeIso string, canonical bool, txIndex int32, txStatus string, txResult AbstractTransactionAllOfTxResult, eventCount int32, parentBlockHash string, isUnanchored bool, microblockHash string, microblockSequence int32, microblockCanonical bool, executionCostReadCount int32, executionCostReadLength int32, executionCostRuntime int64, executionCostWriteCount int32, executionCostWriteLength int32, events []TransactionEvent, txType string, smartContract SmartContractTransactionMetadataSmartContract) *SmartContractTransaction {
 	this := SmartContractTransaction{}
 	this.TxId = txId
 	this.Nonce = nonce
@@ -898,9 +898,9 @@ func (o *SmartContractTransaction) SetExecutionCostReadLength(v int32) {
 }
 
 // GetExecutionCostRuntime returns the ExecutionCostRuntime field value
-func (o *SmartContractTransaction) GetExecutionCostRuntime() int32 {
+func (o *SmartContractTransaction) GetExecutionCostRuntime() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -909,7 +909,7 @@ func (o *SmartContractTransaction) GetExecutionCostRuntime() int32 {
 
 // GetExecutionCostRuntimeOk returns a tuple with the ExecutionCostRuntime field value
 // and a boolean to check if the value has been set.
-func (o *SmartContractTransaction) GetExecutionCostRuntimeOk() (*int32, bool) {
+func (o *SmartContractTransaction) GetExecutionCostRuntimeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -917,7 +917,7 @@ func (o *SmartContractTransaction) GetExecutionCostRuntimeOk() (*int32, bool) {
 }
 
 // SetExecutionCostRuntime sets field value
-func (o *SmartContractTransaction) SetExecutionCostRuntime(v int32) {
+func (o *SmartContractTransaction) SetExecutionCostRuntime(v int64) {
 	o.ExecutionCostRuntime = v
 }
 

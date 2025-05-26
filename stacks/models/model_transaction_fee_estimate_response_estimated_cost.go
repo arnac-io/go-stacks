@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/cbadawi/go-stacks/stacks/utils"
+	"github.com/arnac-io/go-stacks/stacks/utils"
 )
 
 // checks if the TransactionFeeEstimateResponseEstimatedCost type satisfies the MappedNullable interface at compile time
@@ -15,7 +15,7 @@ var _ utils.MappedNullable = &TransactionFeeEstimateResponseEstimatedCost{}
 type TransactionFeeEstimateResponseEstimatedCost struct {
 	ReadCount   int32 `json:"read_count"`
 	ReadLength  int32 `json:"read_length"`
-	Runtime     int32 `json:"runtime"`
+	Runtime     int64 `json:"runtime"`
 	WriteCount  int32 `json:"write_count"`
 	WriteLength int32 `json:"write_length"`
 }
@@ -26,7 +26,7 @@ type _TransactionFeeEstimateResponseEstimatedCost TransactionFeeEstimateResponse
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTransactionFeeEstimateResponseEstimatedCost(readCount int32, readLength int32, runtime int32, writeCount int32, writeLength int32) *TransactionFeeEstimateResponseEstimatedCost {
+func NewTransactionFeeEstimateResponseEstimatedCost(readCount int32, readLength int32, runtime int64, writeCount int32, writeLength int32) *TransactionFeeEstimateResponseEstimatedCost {
 	this := TransactionFeeEstimateResponseEstimatedCost{}
 	this.ReadCount = readCount
 	this.ReadLength = readLength
@@ -93,9 +93,9 @@ func (o *TransactionFeeEstimateResponseEstimatedCost) SetReadLength(v int32) {
 }
 
 // GetRuntime returns the Runtime field value
-func (o *TransactionFeeEstimateResponseEstimatedCost) GetRuntime() int32 {
+func (o *TransactionFeeEstimateResponseEstimatedCost) GetRuntime() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -104,7 +104,7 @@ func (o *TransactionFeeEstimateResponseEstimatedCost) GetRuntime() int32 {
 
 // GetRuntimeOk returns a tuple with the Runtime field value
 // and a boolean to check if the value has been set.
-func (o *TransactionFeeEstimateResponseEstimatedCost) GetRuntimeOk() (*int32, bool) {
+func (o *TransactionFeeEstimateResponseEstimatedCost) GetRuntimeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -112,7 +112,7 @@ func (o *TransactionFeeEstimateResponseEstimatedCost) GetRuntimeOk() (*int32, bo
 }
 
 // SetRuntime sets field value
-func (o *TransactionFeeEstimateResponseEstimatedCost) SetRuntime(v int32) {
+func (o *TransactionFeeEstimateResponseEstimatedCost) SetRuntime(v int64) {
 	o.Runtime = v
 }
 

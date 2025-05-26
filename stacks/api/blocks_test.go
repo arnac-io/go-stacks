@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/cbadawi/go-stacks/stacks/config"
-	"github.com/cbadawi/go-stacks/stacks/models"
+	"github.com/arnac-io/go-stacks/stacks/config"
+	"github.com/arnac-io/go-stacks/stacks/models"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

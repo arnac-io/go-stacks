@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cbadawi/go-stacks/stacks/logger"
-	"github.com/cbadawi/go-stacks/stacks/utils"
+	"github.com/arnac-io/go-stacks/stacks/logger"
+	"github.com/arnac-io/go-stacks/stacks/utils"
 )
 
 // contextKeys are used to identify the type of value in the context.
