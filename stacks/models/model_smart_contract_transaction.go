@@ -81,6 +81,7 @@ type SmartContractTransaction struct {
 	Events        []TransactionEvent                            `json:"events"`
 	TxType        string                                        `json:"tx_type"`
 	SmartContract SmartContractTransactionMetadataSmartContract `json:"smart_contract"`
+	VmError       *string                                       `json:"vm_error,omitempty"`
 }
 
 type _SmartContractTransaction SmartContractTransaction

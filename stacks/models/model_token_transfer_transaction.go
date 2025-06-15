@@ -81,6 +81,7 @@ type TokenTransferTransaction struct {
 	Events        []TransactionEvent                            `json:"events"`
 	TxType        string                                        `json:"tx_type"`
 	TokenTransfer TokenTransferTransactionMetadataTokenTransfer `json:"token_transfer"`
+	VmError       *string                                       `json:"vm_error,omitempty"`
 }
 
 type _TokenTransferTransaction TokenTransferTransaction
