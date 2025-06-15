@@ -128,7 +128,7 @@ func (o *UnanchoredTransactionListResponse) UnmarshalJSON(data []byte) (err erro
 	varUnanchoredTransactionListResponse := _UnanchoredTransactionListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varUnanchoredTransactionListResponse)
 
 	if err != nil {

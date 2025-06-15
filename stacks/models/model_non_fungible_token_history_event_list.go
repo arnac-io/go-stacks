@@ -186,7 +186,7 @@ func (o *NonFungibleTokenHistoryEventList) UnmarshalJSON(data []byte) (err error
 	varNonFungibleTokenHistoryEventList := _NonFungibleTokenHistoryEventList{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varNonFungibleTokenHistoryEventList)
 
 	if err != nil {

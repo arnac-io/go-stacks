@@ -184,7 +184,7 @@ func (o *RosettaSignature) UnmarshalJSON(data []byte) (err error) {
 	varRosettaSignature := _RosettaSignature{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaSignature)
 
 	if err != nil {

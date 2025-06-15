@@ -137,7 +137,7 @@ func (o *MapEntryResponse) UnmarshalJSON(data []byte) (err error) {
 	varMapEntryResponse := _MapEntryResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMapEntryResponse)
 
 	if err != nil {

@@ -155,7 +155,7 @@ func (o *FtBalance) UnmarshalJSON(data []byte) (err error) {
 	varFtBalance := _FtBalance{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varFtBalance)
 
 	if err != nil {

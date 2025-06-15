@@ -213,7 +213,7 @@ func (o *RosettaBlock) UnmarshalJSON(data []byte) (err error) {
 	varRosettaBlock := _RosettaBlock{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaBlock)
 
 	if err != nil {

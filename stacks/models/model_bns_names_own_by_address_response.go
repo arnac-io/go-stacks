@@ -99,7 +99,7 @@ func (o *BnsNamesOwnByAddressResponse) UnmarshalJSON(data []byte) (err error) {
 	varBnsNamesOwnByAddressResponse := _BnsNamesOwnByAddressResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varBnsNamesOwnByAddressResponse)
 
 	if err != nil {

@@ -187,7 +187,7 @@ func (o *RosettaNetworkOptionsResponseAllow) UnmarshalJSON(data []byte) (err err
 	varRosettaNetworkOptionsResponseAllow := _RosettaNetworkOptionsResponseAllow{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaNetworkOptionsResponseAllow)
 
 	if err != nil {

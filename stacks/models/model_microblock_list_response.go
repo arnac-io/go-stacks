@@ -188,7 +188,7 @@ func (o *MicroblockListResponse) UnmarshalJSON(data []byte) (err error) {
 	varMicroblockListResponse := _MicroblockListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMicroblockListResponse)
 
 	if err != nil {

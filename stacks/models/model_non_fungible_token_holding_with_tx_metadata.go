@@ -183,7 +183,7 @@ func (o *NonFungibleTokenHoldingWithTxMetadata) UnmarshalJSON(data []byte) (err 
 	varNonFungibleTokenHoldingWithTxMetadata := _NonFungibleTokenHoldingWithTxMetadata{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varNonFungibleTokenHoldingWithTxMetadata)
 
 	if err != nil {

@@ -211,7 +211,7 @@ func (o *RosettaSyncStatus) UnmarshalJSON(data []byte) (err error) {
 	varRosettaSyncStatus := _RosettaSyncStatus{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaSyncStatus)
 
 	if err != nil {

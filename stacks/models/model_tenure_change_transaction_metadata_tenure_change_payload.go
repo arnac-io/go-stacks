@@ -274,7 +274,7 @@ func (o *TenureChangeTransactionMetadataTenureChangePayload) UnmarshalJSON(data 
 	varTenureChangeTransactionMetadataTenureChangePayload := _TenureChangeTransactionMetadataTenureChangePayload{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTenureChangeTransactionMetadataTenureChangePayload)
 
 	if err != nil {

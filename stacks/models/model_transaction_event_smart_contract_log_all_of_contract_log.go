@@ -155,7 +155,7 @@ func (o *TransactionEventSmartContractLogAllOfContractLog) UnmarshalJSON(data []
 	varTransactionEventSmartContractLogAllOfContractLog := _TransactionEventSmartContractLogAllOfContractLog{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTransactionEventSmartContractLogAllOfContractLog)
 
 	if err != nil {

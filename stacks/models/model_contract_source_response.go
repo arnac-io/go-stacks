@@ -155,7 +155,7 @@ func (o *ContractSourceResponse) UnmarshalJSON(data []byte) (err error) {
 	varContractSourceResponse := _ContractSourceResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varContractSourceResponse)
 
 	if err != nil {

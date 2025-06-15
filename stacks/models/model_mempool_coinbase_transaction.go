@@ -517,7 +517,7 @@ func (o *MempoolCoinbaseTransaction) UnmarshalJSON(data []byte) (err error) {
 	varMempoolCoinbaseTransaction := _MempoolCoinbaseTransaction{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMempoolCoinbaseTransaction)
 
 	if err != nil {

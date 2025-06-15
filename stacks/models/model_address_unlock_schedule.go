@@ -128,7 +128,7 @@ func (o *AddressUnlockSchedule) UnmarshalJSON(data []byte) (err error) {
 	varAddressUnlockSchedule := _AddressUnlockSchedule{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressUnlockSchedule)
 
 	if err != nil {

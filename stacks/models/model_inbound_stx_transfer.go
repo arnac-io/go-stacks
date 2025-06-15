@@ -274,7 +274,7 @@ func (o *InboundStxTransfer) UnmarshalJSON(data []byte) (err error) {
 	varInboundStxTransfer := _InboundStxTransfer{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varInboundStxTransfer)
 
 	if err != nil {

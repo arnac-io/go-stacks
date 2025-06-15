@@ -157,7 +157,7 @@ func (o *AddressTokenOfferingLocked) UnmarshalJSON(data []byte) (err error) {
 	varAddressTokenOfferingLocked := _AddressTokenOfferingLocked{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressTokenOfferingLocked)
 
 	if err != nil {

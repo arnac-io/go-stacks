@@ -200,7 +200,7 @@ func (o *ContractSearchResultResult) UnmarshalJSON(data []byte) (err error) {
 	varContractSearchResultResult := _ContractSearchResultResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varContractSearchResultResult)
 
 	if err != nil {

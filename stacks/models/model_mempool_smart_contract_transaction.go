@@ -517,7 +517,7 @@ func (o *MempoolSmartContractTransaction) UnmarshalJSON(data []byte) (err error)
 	varMempoolSmartContractTransaction := _MempoolSmartContractTransaction{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMempoolSmartContractTransaction)
 
 	if err != nil {

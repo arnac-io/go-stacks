@@ -517,7 +517,7 @@ func (o *MempoolPoisonMicroblockTransaction) UnmarshalJSON(data []byte) (err err
 	varMempoolPoisonMicroblockTransaction := _MempoolPoisonMicroblockTransaction{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMempoolPoisonMicroblockTransaction)
 
 	if err != nil {

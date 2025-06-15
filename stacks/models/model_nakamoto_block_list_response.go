@@ -188,7 +188,7 @@ func (o *NakamotoBlockListResponse) UnmarshalJSON(data []byte) (err error) {
 	varNakamotoBlockListResponse := _NakamotoBlockListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varNakamotoBlockListResponse)
 
 	if err != nil {

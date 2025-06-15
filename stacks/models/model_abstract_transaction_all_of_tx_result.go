@@ -129,7 +129,7 @@ func (o *AbstractTransactionAllOfTxResult) UnmarshalJSON(data []byte) (err error
 	varAbstractTransactionAllOfTxResult := _AbstractTransactionAllOfTxResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAbstractTransactionAllOfTxResult)
 
 	if err != nil {

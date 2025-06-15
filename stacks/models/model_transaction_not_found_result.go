@@ -99,7 +99,7 @@ func (o *TransactionNotFoundResult) UnmarshalJSON(data []byte) (err error) {
 	varTransactionNotFoundResult := _TransactionNotFoundResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTransactionNotFoundResult)
 
 	if err != nil {

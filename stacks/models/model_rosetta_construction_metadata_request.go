@@ -163,7 +163,7 @@ func (o *RosettaConstructionMetadataRequest) UnmarshalJSON(data []byte) (err err
 	varRosettaConstructionMetadataRequest := _RosettaConstructionMetadataRequest{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaConstructionMetadataRequest)
 
 	if err != nil {

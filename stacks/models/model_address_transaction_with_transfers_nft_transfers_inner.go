@@ -202,7 +202,7 @@ func (o *AddressTransactionWithTransfersNftTransfersInner) UnmarshalJSON(data []
 	varAddressTransactionWithTransfersNftTransfersInner := _AddressTransactionWithTransfersNftTransfersInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressTransactionWithTransfersNftTransfersInner)
 
 	if err != nil {

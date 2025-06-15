@@ -100,7 +100,7 @@ func (o *RosettaNetworkListResponse) UnmarshalJSON(data []byte) (err error) {
 	varRosettaNetworkListResponse := _RosettaNetworkListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaNetworkListResponse)
 
 	if err != nil {

@@ -738,7 +738,7 @@ func (o *Block) UnmarshalJSON(data []byte) (err error) {
 	varBlock := _Block{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varBlock)
 
 	if err != nil {

@@ -188,7 +188,7 @@ func (o *PoxCycleSignersListResponse) UnmarshalJSON(data []byte) (err error) {
 	varPoxCycleSignersListResponse := _PoxCycleSignersListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varPoxCycleSignersListResponse)
 
 	if err != nil {

@@ -257,7 +257,7 @@ func (o *AddressTransactionWithTransfers) UnmarshalJSON(data []byte) (err error)
 	varAddressTransactionWithTransfers := _AddressTransactionWithTransfers{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressTransactionWithTransfers)
 
 	if err != nil {

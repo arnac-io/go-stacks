@@ -99,7 +99,7 @@ func (o *FeeRate) UnmarshalJSON(data []byte) (err error) {
 	varFeeRate := _FeeRate{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varFeeRate)
 
 	if err != nil {

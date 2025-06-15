@@ -622,7 +622,7 @@ func (o *NakamotoBlock) UnmarshalJSON(data []byte) (err error) {
 	varNakamotoBlock := _NakamotoBlock{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varNakamotoBlock)
 
 	if err != nil {

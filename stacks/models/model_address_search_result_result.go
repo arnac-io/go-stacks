@@ -164,7 +164,7 @@ func (o *AddressSearchResultResult) UnmarshalJSON(data []byte) (err error) {
 	varAddressSearchResultResult := _AddressSearchResultResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressSearchResultResult)
 
 	if err != nil {

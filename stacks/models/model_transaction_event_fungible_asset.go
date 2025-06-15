@@ -183,7 +183,7 @@ func (o *TransactionEventFungibleAsset) UnmarshalJSON(data []byte) (err error) {
 	varTransactionEventFungibleAsset := _TransactionEventFungibleAsset{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTransactionEventFungibleAsset)
 
 	if err != nil {

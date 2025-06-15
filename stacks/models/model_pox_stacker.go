@@ -183,7 +183,7 @@ func (o *PoxStacker) UnmarshalJSON(data []byte) (err error) {
 	varPoxStacker := _PoxStacker{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varPoxStacker)
 
 	if err != nil {

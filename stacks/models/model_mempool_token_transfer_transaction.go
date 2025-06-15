@@ -517,7 +517,7 @@ func (o *MempoolTokenTransferTransaction) UnmarshalJSON(data []byte) (err error)
 	varMempoolTokenTransferTransaction := _MempoolTokenTransferTransaction{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMempoolTokenTransferTransaction)
 
 	if err != nil {

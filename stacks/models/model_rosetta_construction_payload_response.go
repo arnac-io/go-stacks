@@ -129,7 +129,7 @@ func (o *RosettaConstructionPayloadResponse) UnmarshalJSON(data []byte) (err err
 	varRosettaConstructionPayloadResponse := _RosettaConstructionPayloadResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaConstructionPayloadResponse)
 
 	if err != nil {

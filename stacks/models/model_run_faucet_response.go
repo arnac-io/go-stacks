@@ -174,7 +174,7 @@ func (o *RunFaucetResponse) UnmarshalJSON(data []byte) (err error) {
 	varRunFaucetResponse := _RunFaucetResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRunFaucetResponse)
 
 	if err != nil {

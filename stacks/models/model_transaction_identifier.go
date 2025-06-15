@@ -100,7 +100,7 @@ func (o *TransactionIdentifier) UnmarshalJSON(data []byte) (err error) {
 	varTransactionIdentifier := _TransactionIdentifier{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTransactionIdentifier)
 
 	if err != nil {

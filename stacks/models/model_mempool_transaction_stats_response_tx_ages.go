@@ -183,7 +183,7 @@ func (o *MempoolTransactionStatsResponseTxAges) UnmarshalJSON(data []byte) (err 
 	varMempoolTransactionStatsResponseTxAges := _MempoolTransactionStatsResponseTxAges{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMempoolTransactionStatsResponseTxAges)
 
 	if err != nil {

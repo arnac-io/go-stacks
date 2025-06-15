@@ -127,7 +127,7 @@ func (o *NetworkBlockTimesResponse) UnmarshalJSON(data []byte) (err error) {
 	varNetworkBlockTimesResponse := _NetworkBlockTimesResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varNetworkBlockTimesResponse)
 
 	if err != nil {

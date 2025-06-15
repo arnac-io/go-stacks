@@ -213,7 +213,7 @@ func (o *TxSearchResultResultTxData) UnmarshalJSON(data []byte) (err error) {
 	varTxSearchResultResultTxData := _TxSearchResultResultTxData{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTxSearchResultResultTxData)
 
 	if err != nil {

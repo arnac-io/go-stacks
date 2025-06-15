@@ -298,7 +298,7 @@ func (o *PoxSigner) UnmarshalJSON(data []byte) (err error) {
 	varPoxSigner := _PoxSigner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varPoxSigner)
 
 	if err != nil {

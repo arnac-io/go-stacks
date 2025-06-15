@@ -173,7 +173,7 @@ func (o *RosettaAccountIdentifier) UnmarshalJSON(data []byte) (err error) {
 	varRosettaAccountIdentifier := _RosettaAccountIdentifier{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaAccountIdentifier)
 
 	if err != nil {

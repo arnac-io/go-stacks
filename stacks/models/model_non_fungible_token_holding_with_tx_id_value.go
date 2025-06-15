@@ -129,7 +129,7 @@ func (o *NonFungibleTokenHoldingWithTxIdValue) UnmarshalJSON(data []byte) (err e
 	varNonFungibleTokenHoldingWithTxIdValue := _NonFungibleTokenHoldingWithTxIdValue{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varNonFungibleTokenHoldingWithTxIdValue)
 
 	if err != nil {

@@ -448,7 +448,7 @@ func (o *CoreNodeInfoResponse) UnmarshalJSON(data []byte) (err error) {
 	varCoreNodeInfoResponse := _CoreNodeInfoResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varCoreNodeInfoResponse)
 
 	if err != nil {

@@ -99,7 +99,7 @@ func (o *RosettaAccountBalanceResponseMetadata) UnmarshalJSON(data []byte) (err 
 	varRosettaAccountBalanceResponseMetadata := _RosettaAccountBalanceResponseMetadata{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaAccountBalanceResponseMetadata)
 
 	if err != nil {

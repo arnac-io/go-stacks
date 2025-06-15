@@ -212,7 +212,7 @@ func (o *PostConditionFungible) UnmarshalJSON(data []byte) (err error) {
 	varPostConditionFungible := _PostConditionFungible{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varPostConditionFungible)
 
 	if err != nil {

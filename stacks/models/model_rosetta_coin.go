@@ -127,7 +127,7 @@ func (o *RosettaCoin) UnmarshalJSON(data []byte) (err error) {
 	varRosettaCoin := _RosettaCoin{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaCoin)
 
 	if err != nil {

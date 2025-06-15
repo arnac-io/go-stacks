@@ -199,7 +199,7 @@ func (o *TransactionFeeEstimateResponse) UnmarshalJSON(data []byte) (err error) 
 	varTransactionFeeEstimateResponse := _TransactionFeeEstimateResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTransactionFeeEstimateResponse)
 
 	if err != nil {

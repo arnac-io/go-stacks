@@ -183,7 +183,7 @@ func (o *AddressStxInboundListResponse) UnmarshalJSON(data []byte) (err error) {
 	varAddressStxInboundListResponse := _AddressStxInboundListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressStxInboundListResponse)
 
 	if err != nil {

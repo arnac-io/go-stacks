@@ -174,7 +174,7 @@ func (o *AddressTransactionWithTransfersStxTransfersInner) UnmarshalJSON(data []
 	varAddressTransactionWithTransfersStxTransfersInner := _AddressTransactionWithTransfersStxTransfersInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressTransactionWithTransfersStxTransfersInner)
 
 	if err != nil {

@@ -99,7 +99,7 @@ func (o *TargetBlockTime) UnmarshalJSON(data []byte) (err error) {
 	varTargetBlockTime := _TargetBlockTime{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTargetBlockTime)
 
 	if err != nil {

@@ -239,7 +239,7 @@ func (o *PoxCycle) UnmarshalJSON(data []byte) (err error) {
 	varPoxCycle := _PoxCycle{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varPoxCycle)
 
 	if err != nil {

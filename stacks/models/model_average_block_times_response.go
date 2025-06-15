@@ -187,7 +187,7 @@ func (o *AverageBlockTimesResponse) UnmarshalJSON(data []byte) (err error) {
 	varAverageBlockTimesResponse := _AverageBlockTimesResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAverageBlockTimesResponse)
 
 	if err != nil {

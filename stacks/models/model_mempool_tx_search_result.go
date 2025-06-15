@@ -130,7 +130,7 @@ func (o *MempoolTxSearchResult) UnmarshalJSON(data []byte) (err error) {
 	varMempoolTxSearchResult := _MempoolTxSearchResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMempoolTxSearchResult)
 
 	if err != nil {

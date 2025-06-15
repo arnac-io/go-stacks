@@ -479,7 +479,7 @@ func (o *Microblock) UnmarshalJSON(data []byte) (err error) {
 	varMicroblock := _Microblock{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMicroblock)
 
 	if err != nil {

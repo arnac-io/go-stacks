@@ -191,7 +191,7 @@ func (o *MempoolTransactionStatsResponseTxSimpleFeeAveragesTokenTransfer) Unmars
 	varMempoolTransactionStatsResponseTxSimpleFeeAveragesTokenTransfer := _MempoolTransactionStatsResponseTxSimpleFeeAveragesTokenTransfer{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varMempoolTransactionStatsResponseTxSimpleFeeAveragesTokenTransfer)
 
 	if err != nil {

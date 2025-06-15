@@ -100,7 +100,7 @@ func (o *RosettaBlockIdentifierHeight) UnmarshalJSON(data []byte) (err error) {
 	varRosettaBlockIdentifierHeight := _RosettaBlockIdentifierHeight{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaBlockIdentifierHeight)
 
 	if err != nil {

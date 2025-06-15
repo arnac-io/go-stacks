@@ -163,7 +163,7 @@ func (o *RosettaAccountBalanceRequest) UnmarshalJSON(data []byte) (err error) {
 	varRosettaAccountBalanceRequest := _RosettaAccountBalanceRequest{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaAccountBalanceRequest)
 
 	if err != nil {

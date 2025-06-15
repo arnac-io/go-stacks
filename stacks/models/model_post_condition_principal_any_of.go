@@ -100,7 +100,7 @@ func (o *PostConditionPrincipalAnyOf) UnmarshalJSON(data []byte) (err error) {
 	varPostConditionPrincipalAnyOf := _PostConditionPrincipalAnyOf{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varPostConditionPrincipalAnyOf)
 
 	if err != nil {

@@ -236,7 +236,7 @@ func (o *RosettaConstructionPreprocessRequest) UnmarshalJSON(data []byte) (err e
 	varRosettaConstructionPreprocessRequest := _RosettaConstructionPreprocessRequest{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaConstructionPreprocessRequest)
 
 	if err != nil {

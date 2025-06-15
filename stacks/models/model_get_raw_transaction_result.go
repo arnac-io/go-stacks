@@ -100,7 +100,7 @@ func (o *GetRawTransactionResult) UnmarshalJSON(data []byte) (err error) {
 	varGetRawTransactionResult := _GetRawTransactionResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varGetRawTransactionResult)
 
 	if err != nil {

@@ -156,7 +156,7 @@ func (o *PostConditionPrincipalAnyOf2) UnmarshalJSON(data []byte) (err error) {
 	varPostConditionPrincipalAnyOf2 := _PostConditionPrincipalAnyOf2{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varPostConditionPrincipalAnyOf2)
 
 	if err != nil {

@@ -323,7 +323,7 @@ func (o *CoreNodePoxResponse) UnmarshalJSON(data []byte) (err error) {
 	varCoreNodePoxResponse := _CoreNodePoxResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varCoreNodePoxResponse)
 
 	if err != nil {

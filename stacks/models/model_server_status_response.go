@@ -314,7 +314,7 @@ func (o *ServerStatusResponse) UnmarshalJSON(data []byte) (err error) {
 	varServerStatusResponse := _ServerStatusResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varServerStatusResponse)
 
 	if err != nil {

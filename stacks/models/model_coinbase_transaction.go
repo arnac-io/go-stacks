@@ -1154,7 +1154,7 @@ func (o *CoinbaseTransaction) UnmarshalJSON(data []byte) (err error) {
 	varCoinbaseTransaction := _CoinbaseTransaction{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varCoinbaseTransaction)
 
 	if err != nil {

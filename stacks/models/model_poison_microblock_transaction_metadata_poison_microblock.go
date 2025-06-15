@@ -129,7 +129,7 @@ func (o *PoisonMicroblockTransactionMetadataPoisonMicroblock) UnmarshalJSON(data
 	varPoisonMicroblockTransactionMetadataPoisonMicroblock := _PoisonMicroblockTransactionMetadataPoisonMicroblock{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varPoisonMicroblockTransactionMetadataPoisonMicroblock)
 
 	if err != nil {

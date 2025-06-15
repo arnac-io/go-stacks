@@ -130,7 +130,7 @@ func (o *BlockSearchResult) UnmarshalJSON(data []byte) (err error) {
 	varBlockSearchResult := _BlockSearchResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varBlockSearchResult)
 
 	if err != nil {

@@ -183,7 +183,7 @@ func (o *AddressAssetsListResponse) UnmarshalJSON(data []byte) (err error) {
 	varAddressAssetsListResponse := _AddressAssetsListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressAssetsListResponse)
 
 	if err != nil {

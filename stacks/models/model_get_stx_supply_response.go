@@ -187,7 +187,7 @@ func (o *GetStxSupplyResponse) UnmarshalJSON(data []byte) (err error) {
 	varGetStxSupplyResponse := _GetStxSupplyResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varGetStxSupplyResponse)
 
 	if err != nil {

@@ -245,7 +245,7 @@ func (o *GetStxSupplyLegacyFormatResponse) UnmarshalJSON(data []byte) (err error
 	varGetStxSupplyLegacyFormatResponse := _GetStxSupplyLegacyFormatResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varGetStxSupplyLegacyFormatResponse)
 
 	if err != nil {

@@ -191,7 +191,7 @@ func (o *AddressBalanceResponse) UnmarshalJSON(data []byte) (err error) {
 	varAddressBalanceResponse := _AddressBalanceResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressBalanceResponse)
 
 	if err != nil {

@@ -239,7 +239,7 @@ func (o *AccountDataResponse) UnmarshalJSON(data []byte) (err error) {
 	varAccountDataResponse := _AccountDataResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAccountDataResponse)
 
 	if err != nil {

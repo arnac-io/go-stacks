@@ -261,7 +261,7 @@ func (o *ChainTip) UnmarshalJSON(data []byte) (err error) {
 	varChainTip := _ChainTip{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varChainTip)
 
 	if err != nil {

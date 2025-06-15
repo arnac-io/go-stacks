@@ -274,7 +274,7 @@ func (o *BurnBlock) UnmarshalJSON(data []byte) (err error) {
 	varBurnBlock := _BurnBlock{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varBurnBlock)
 
 	if err != nil {

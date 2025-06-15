@@ -155,7 +155,7 @@ func (o *NftBalance) UnmarshalJSON(data []byte) (err error) {
 	varNftBalance := _NftBalance{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varNftBalance)
 
 	if err != nil {

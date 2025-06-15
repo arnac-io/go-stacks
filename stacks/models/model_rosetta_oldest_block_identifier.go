@@ -129,7 +129,7 @@ func (o *RosettaOldestBlockIdentifier) UnmarshalJSON(data []byte) (err error) {
 	varRosettaOldestBlockIdentifier := _RosettaOldestBlockIdentifier{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaOldestBlockIdentifier)
 
 	if err != nil {

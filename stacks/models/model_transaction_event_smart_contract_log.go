@@ -183,7 +183,7 @@ func (o *TransactionEventSmartContractLog) UnmarshalJSON(data []byte) (err error
 	varTransactionEventSmartContractLog := _TransactionEventSmartContractLog{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTransactionEventSmartContractLog)
 
 	if err != nil {

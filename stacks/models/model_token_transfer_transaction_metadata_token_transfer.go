@@ -157,7 +157,7 @@ func (o *TokenTransferTransactionMetadataTokenTransfer) UnmarshalJSON(data []byt
 	varTokenTransferTransactionMetadataTokenTransfer := _TokenTransferTransactionMetadataTokenTransfer{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTokenTransferTransactionMetadataTokenTransfer)
 
 	if err != nil {

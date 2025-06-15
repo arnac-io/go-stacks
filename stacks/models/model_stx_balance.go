@@ -356,7 +356,7 @@ func (o *StxBalance) UnmarshalJSON(data []byte) (err error) {
 	varStxBalance := _StxBalance{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varStxBalance)
 
 	if err != nil {

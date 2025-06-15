@@ -211,7 +211,7 @@ func (o *TransactionEventNonFungibleAssetAllOfAsset) UnmarshalJSON(data []byte) 
 	varTransactionEventNonFungibleAssetAllOfAsset := _TransactionEventNonFungibleAssetAllOfAsset{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTransactionEventNonFungibleAssetAllOfAsset)
 
 	if err != nil {

@@ -100,7 +100,7 @@ func (o *RosettaBlockIdentifierHash) UnmarshalJSON(data []byte) (err error) {
 	varRosettaBlockIdentifierHash := _RosettaBlockIdentifierHash{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaBlockIdentifierHash)
 
 	if err != nil {

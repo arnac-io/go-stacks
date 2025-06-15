@@ -183,7 +183,7 @@ func (o *ContractCallTransactionMetadataContractCallFunctionArgsInner) Unmarshal
 	varContractCallTransactionMetadataContractCallFunctionArgsInner := _ContractCallTransactionMetadataContractCallFunctionArgsInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varContractCallTransactionMetadataContractCallFunctionArgsInner)
 
 	if err != nil {

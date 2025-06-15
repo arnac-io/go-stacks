@@ -127,7 +127,7 @@ func (o *PostConditionNonFungibleAllOfAssetValue) UnmarshalJSON(data []byte) (er
 	varPostConditionNonFungibleAllOfAssetValue := _PostConditionNonFungibleAllOfAssetValue{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varPostConditionNonFungibleAllOfAssetValue)
 
 	if err != nil {

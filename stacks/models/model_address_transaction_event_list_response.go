@@ -183,7 +183,7 @@ func (o *AddressTransactionEventListResponse) UnmarshalJSON(data []byte) (err er
 	varAddressTransactionEventListResponse := _AddressTransactionEventListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressTransactionEventListResponse)
 
 	if err != nil {

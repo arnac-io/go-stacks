@@ -129,7 +129,7 @@ func (o *RosettaPublicKey) UnmarshalJSON(data []byte) (err error) {
 	varRosettaPublicKey := _RosettaPublicKey{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaPublicKey)
 
 	if err != nil {

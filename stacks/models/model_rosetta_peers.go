@@ -137,7 +137,7 @@ func (o *RosettaPeers) UnmarshalJSON(data []byte) (err error) {
 	varRosettaPeers := _RosettaPeers{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaPeers)
 
 	if err != nil {

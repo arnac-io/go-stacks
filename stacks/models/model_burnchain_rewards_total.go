@@ -129,7 +129,7 @@ func (o *BurnchainRewardsTotal) UnmarshalJSON(data []byte) (err error) {
 	varBurnchainRewardsTotal := _BurnchainRewardsTotal{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varBurnchainRewardsTotal)
 
 	if err != nil {

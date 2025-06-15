@@ -127,7 +127,7 @@ func (o *AddressTransactionEventAnyOf2DataValue) UnmarshalJSON(data []byte) (err
 	varAddressTransactionEventAnyOf2DataValue := _AddressTransactionEventAnyOf2DataValue{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varAddressTransactionEventAnyOf2DataValue)
 
 	if err != nil {

@@ -135,7 +135,7 @@ func (o *RosettaMempoolTransactionResponse) UnmarshalJSON(data []byte) (err erro
 	varRosettaMempoolTransactionResponse := _RosettaMempoolTransactionResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaMempoolTransactionResponse)
 
 	if err != nil {

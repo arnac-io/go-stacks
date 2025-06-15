@@ -129,7 +129,7 @@ func (o *RosettaParentBlockIdentifier) UnmarshalJSON(data []byte) (err error) {
 	varRosettaParentBlockIdentifier := _RosettaParentBlockIdentifier{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaParentBlockIdentifier)
 
 	if err != nil {

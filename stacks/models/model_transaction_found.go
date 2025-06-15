@@ -127,7 +127,7 @@ func (o *TransactionFound) UnmarshalJSON(data []byte) (err error) {
 	varTransactionFound := _TransactionFound{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varTransactionFound)
 
 	if err != nil {

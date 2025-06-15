@@ -177,7 +177,7 @@ func (o *SmartContractTransactionMetadataSmartContract) UnmarshalJSON(data []byt
 	varSmartContractTransactionMetadataSmartContract := _SmartContractTransactionMetadataSmartContract{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varSmartContractTransactionMetadataSmartContract)
 
 	if err != nil {

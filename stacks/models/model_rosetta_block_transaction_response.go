@@ -99,7 +99,7 @@ func (o *RosettaBlockTransactionResponse) UnmarshalJSON(data []byte) (err error)
 	varRosettaBlockTransactionResponse := _RosettaBlockTransactionResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaBlockTransactionResponse)
 
 	if err != nil {

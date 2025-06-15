@@ -137,7 +137,7 @@ func (o *RosettaSubAccount) UnmarshalJSON(data []byte) (err error) {
 	varRosettaSubAccount := _RosettaSubAccount{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varRosettaSubAccount)
 
 	if err != nil {

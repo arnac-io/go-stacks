@@ -196,7 +196,7 @@ func (o *CoinbaseTransactionMetadataCoinbasePayload) UnmarshalJSON(data []byte) 
 	varCoinbaseTransactionMetadataCoinbasePayload := _CoinbaseTransactionMetadataCoinbasePayload{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
+
 	err = decoder.Decode(&varCoinbaseTransactionMetadataCoinbasePayload)
 
 	if err != nil {
