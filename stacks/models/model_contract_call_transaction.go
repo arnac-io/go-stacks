@@ -81,6 +81,7 @@ type ContractCallTransaction struct {
 	Events       []TransactionEvent                          `json:"events"`
 	TxType       string                                      `json:"tx_type"`
 	ContractCall ContractCallTransactionMetadataContractCall `json:"contract_call"`
+	VmError      *string                                     `json:"vm_error,omitempty"`
 }
 
 type _ContractCallTransaction ContractCallTransaction
