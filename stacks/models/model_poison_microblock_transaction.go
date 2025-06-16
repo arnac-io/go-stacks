@@ -81,6 +81,7 @@ type PoisonMicroblockTransaction struct {
 	Events           []TransactionEvent                                  `json:"events"`
 	TxType           string                                              `json:"tx_type"`
 	PoisonMicroblock PoisonMicroblockTransactionMetadataPoisonMicroblock `json:"poison_microblock"`
+	VmError          *string                                             `json:"vm_error,omitempty"`
 }
 
 type _PoisonMicroblockTransaction PoisonMicroblockTransaction

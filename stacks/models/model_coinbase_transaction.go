@@ -81,6 +81,7 @@ type CoinbaseTransaction struct {
 	Events          []TransactionEvent                         `json:"events"`
 	TxType          string                                     `json:"tx_type"`
 	CoinbasePayload CoinbaseTransactionMetadataCoinbasePayload `json:"coinbase_payload"`
+	VmError         *string                                    `json:"vm_error,omitempty"`
 }
 
 type _CoinbaseTransaction CoinbaseTransaction

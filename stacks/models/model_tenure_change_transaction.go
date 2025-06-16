@@ -81,6 +81,7 @@ type TenureChangeTransaction struct {
 	Events              []TransactionEvent                                  `json:"events"`
 	TxType              string                                              `json:"tx_type"`
 	TenureChangePayload *TenureChangeTransactionMetadataTenureChangePayload `json:"tenure_change_payload,omitempty"`
+	VmError             *string                                             `json:"vm_error,omitempty"`
 }
 
 type _TenureChangeTransaction TenureChangeTransaction
