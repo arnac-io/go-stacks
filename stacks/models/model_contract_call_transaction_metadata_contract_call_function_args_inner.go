@@ -161,9 +161,6 @@ func (o *ContractCallTransactionMetadataContractCallFunctionArgsInner) Unmarshal
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"hex",
-		"repr",
-		"name",
-		"type",
 	}
 
 	allProperties := make(map[string]interface{})
