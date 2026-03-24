@@ -273,12 +273,6 @@ func parameterToJson(obj interface{}) (string, error) {
 }
 
 func handleRequest(r *http.Request) {
-	fmt.Printf("Method: %s\n", r.Method)
-	fmt.Printf("URL: %s\n", r.URL)
-	fmt.Printf("Headers: %v\n", r.Header)
-
-	fmt.Printf("Content Length: %d\n", r.ContentLength)
-	fmt.Printf("Remote Address: %s\n", r.RemoteAddr)
 }
 
 // callAPI do the request.
@@ -294,7 +288,6 @@ func (c *APIClient) callAPI(request *http.Request) (*http.Response, error) {
 	}
 
 	resp, err := c.cfg.HTTPClient.Do(request)
-	fmt.Println(err)
 	if err != nil {
 		c.cfg.Logger.PrintError(err, nil)
 		return resp, err
