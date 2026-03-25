@@ -3,7 +3,6 @@ package api
 import (
 	"bytes"
 	"context"
-	"fmt"
 	"io"
 	"net/http"
 	"net/url"
@@ -196,18 +195,15 @@ func (a *FeesAPIService) GetFeeTransferExecute(r ApiGetFeeTransferRequest) (int,
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 
-	fmt.Println(1111111)
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
 	}
-	fmt.Println(1111111)
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
-	fmt.Println(22222)
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
@@ -222,11 +218,9 @@ func (a *FeesAPIService) GetFeeTransferExecute(r ApiGetFeeTransferRequest) (int,
 			error: localVarHTTPResponse.Status,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
-		fmt.Println(333333)
 	}
 
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	fmt.Println(err)
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
@@ -234,7 +228,6 @@ func (a *FeesAPIService) GetFeeTransferExecute(r ApiGetFeeTransferRequest) (int,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	fmt.Println(555555)
 
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
