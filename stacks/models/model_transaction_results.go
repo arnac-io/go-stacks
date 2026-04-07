@@ -186,7 +186,6 @@ func (o *TransactionResults) UnmarshalJSON(data []byte) (err error) {
 	varTransactionResults := _TransactionResults{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varTransactionResults)
 
 	if err != nil {

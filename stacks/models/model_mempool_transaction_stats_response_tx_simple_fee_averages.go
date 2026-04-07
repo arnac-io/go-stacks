@@ -183,7 +183,6 @@ func (o *MempoolTransactionStatsResponseTxSimpleFeeAverages) UnmarshalJSON(data 
 	varMempoolTransactionStatsResponseTxSimpleFeeAverages := _MempoolTransactionStatsResponseTxSimpleFeeAverages{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varMempoolTransactionStatsResponseTxSimpleFeeAverages)
 
 	if err != nil {

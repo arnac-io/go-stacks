@@ -216,7 +216,6 @@ func (o *ContractInterfaceResponse) UnmarshalJSON(data []byte) (err error) {
 	varContractInterfaceResponse := _ContractInterfaceResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varContractInterfaceResponse)
 
 	if err != nil {

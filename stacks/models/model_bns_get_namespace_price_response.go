@@ -127,7 +127,6 @@ func (o *BnsGetNamespacePriceResponse) UnmarshalJSON(data []byte) (err error) {
 	varBnsGetNamespacePriceResponse := _BnsGetNamespacePriceResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varBnsGetNamespacePriceResponse)
 
 	if err != nil {

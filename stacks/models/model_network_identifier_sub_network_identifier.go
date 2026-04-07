@@ -136,7 +136,6 @@ func (o *NetworkIdentifierSubNetworkIdentifier) UnmarshalJSON(data []byte) (err 
 	varNetworkIdentifierSubNetworkIdentifier := _NetworkIdentifierSubNetworkIdentifier{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varNetworkIdentifierSubNetworkIdentifier)
 
 	if err != nil {

@@ -1163,7 +1163,6 @@ func (o *TenureChangeTransaction) UnmarshalJSON(data []byte) (err error) {
 	varTenureChangeTransaction := _TenureChangeTransaction{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varTenureChangeTransaction)
 
 	if err != nil {

@@ -188,7 +188,6 @@ func (o *BurnBlockListResponse) UnmarshalJSON(data []byte) (err error) {
 	varBurnBlockListResponse := _BurnBlockListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varBurnBlockListResponse)
 
 	if err != nil {

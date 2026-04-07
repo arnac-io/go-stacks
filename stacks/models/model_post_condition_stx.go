@@ -184,7 +184,6 @@ func (o *PostConditionStx) UnmarshalJSON(data []byte) (err error) {
 	varPostConditionStx := _PostConditionStx{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varPostConditionStx)
 
 	if err != nil {

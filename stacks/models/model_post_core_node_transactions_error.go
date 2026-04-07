@@ -187,7 +187,6 @@ func (o *PostCoreNodeTransactionsError) UnmarshalJSON(data []byte) (err error) {
 	varPostCoreNodeTransactionsError := _PostCoreNodeTransactionsError{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varPostCoreNodeTransactionsError)
 
 	if err != nil {

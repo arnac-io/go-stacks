@@ -207,7 +207,6 @@ func (o *MempoolFeePriorities) UnmarshalJSON(data []byte) (err error) {
 	varMempoolFeePriorities := _MempoolFeePriorities{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varMempoolFeePriorities)
 
 	if err != nil {
