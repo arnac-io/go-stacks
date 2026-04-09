@@ -525,6 +525,7 @@ func (o *MempoolTenureChangeTransaction) UnmarshalJSON(data []byte) (err error) 
 	varMempoolTenureChangeTransaction := _MempoolTenureChangeTransaction{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varMempoolTenureChangeTransaction)
 
 	if err != nil {
