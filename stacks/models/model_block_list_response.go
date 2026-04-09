@@ -188,7 +188,6 @@ func (o *BlockListResponse) UnmarshalJSON(data []byte) (err error) {
 	varBlockListResponse := _BlockListResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varBlockListResponse)
 
 	if err != nil {

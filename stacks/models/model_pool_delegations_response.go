@@ -188,7 +188,6 @@ func (o *PoolDelegationsResponse) UnmarshalJSON(data []byte) (err error) {
 	varPoolDelegationsResponse := _PoolDelegationsResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varPoolDelegationsResponse)
 
 	if err != nil {

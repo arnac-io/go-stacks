@@ -171,7 +171,6 @@ func (o *ReadOnlyFunctionSuccessResponse) UnmarshalJSON(data []byte) (err error)
 	varReadOnlyFunctionSuccessResponse := _ReadOnlyFunctionSuccessResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varReadOnlyFunctionSuccessResponse)
 
 	if err != nil {

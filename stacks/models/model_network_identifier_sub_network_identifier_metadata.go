@@ -100,7 +100,6 @@ func (o *NetworkIdentifierSubNetworkIdentifierMetadata) UnmarshalJSON(data []byt
 	varNetworkIdentifierSubNetworkIdentifierMetadata := _NetworkIdentifierSubNetworkIdentifierMetadata{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varNetworkIdentifierSubNetworkIdentifierMetadata)
 
 	if err != nil {

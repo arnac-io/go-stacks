@@ -183,7 +183,6 @@ func (o *MempoolTransactionStatsResponseTxByteSizes) UnmarshalJSON(data []byte) 
 	varMempoolTransactionStatsResponseTxByteSizes := _MempoolTransactionStatsResponseTxByteSizes{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varMempoolTransactionStatsResponseTxByteSizes)
 
 	if err != nil {

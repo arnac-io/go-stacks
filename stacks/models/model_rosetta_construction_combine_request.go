@@ -155,7 +155,6 @@ func (o *RosettaConstructionCombineRequest) UnmarshalJSON(data []byte) (err erro
 	varRosettaConstructionCombineRequest := _RosettaConstructionCombineRequest{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varRosettaConstructionCombineRequest)
 
 	if err != nil {

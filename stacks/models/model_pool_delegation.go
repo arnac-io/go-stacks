@@ -261,7 +261,6 @@ func (o *PoolDelegation) UnmarshalJSON(data []byte) (err error) {
 	varPoolDelegation := _PoolDelegation{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varPoolDelegation)
 
 	if err != nil {

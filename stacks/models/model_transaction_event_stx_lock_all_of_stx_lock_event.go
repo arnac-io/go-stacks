@@ -155,7 +155,6 @@ func (o *TransactionEventStxLockAllOfStxLockEvent) UnmarshalJSON(data []byte) (e
 	varTransactionEventStxLockAllOfStxLockEvent := _TransactionEventStxLockAllOfStxLockEvent{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varTransactionEventStxLockAllOfStxLockEvent)
 
 	if err != nil {
