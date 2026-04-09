@@ -392,6 +392,7 @@ func (o *AddressStxBalanceResponse) UnmarshalJSON(data []byte) (err error) {
 	varAddressStxBalanceResponse := _AddressStxBalanceResponse{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varAddressStxBalanceResponse)
 
 	if err != nil {
