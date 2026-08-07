@@ -9,6 +9,7 @@ import (
 type PostCondition struct {
 	PostConditionFungible    *PostConditionFungible
 	PostConditionNonFungible *PostConditionNonFungible
+	PostConditionPox         *PostConditionPox
 	PostConditionStx         *PostConditionStx
 }
 
@@ -54,6 +55,19 @@ func (dst *PostCondition) UnmarshalJSON(data []byte) error {
 		dst.PostConditionStx = nil
 	}
 
+	// try to unmarshal JSON data into PostConditionPox
+	err = json.Unmarshal(data, &dst.PostConditionPox)
+	if err == nil {
+		jsonPostConditionPox, _ := json.Marshal(dst.PostConditionPox)
+		if string(jsonPostConditionPox) == "{}" { // empty struct
+			dst.PostConditionPox = nil
+		} else {
+			return nil // data stored in dst.PostConditionPox, return on the first match
+		}
+	} else {
+		dst.PostConditionPox = nil
+	}
+
 	return fmt.Errorf("data failed to match schemas in anyOf(PostCondition)")
 }
 
@@ -65,6 +79,10 @@ func (src *PostCondition) MarshalJSON() ([]byte, error) {
 
 	if src.PostConditionNonFungible != nil {
 		return json.Marshal(&src.PostConditionNonFungible)
+	}
+
+	if src.PostConditionPox != nil {
+		return json.Marshal(&src.PostConditionPox)
 	}
 
 	if src.PostConditionStx != nil {
