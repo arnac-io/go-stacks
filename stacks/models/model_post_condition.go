@@ -10,65 +10,46 @@ type PostCondition struct {
 	PostConditionFungible    *PostConditionFungible
 	PostConditionNonFungible *PostConditionNonFungible
 	PostConditionPox         *PostConditionPox
+	PostConditionStaking     *PostConditionStaking
 	PostConditionStx         *PostConditionStx
 }
 
-// Unmarshal JSON data into any of the pointers in the struct
+// Unmarshal JSON data into the pointer matching the "type" discriminator.
+// Staking and stx carry identical fields, so trying each variant in turn
+// silently picks the wrong one.
 func (dst *PostCondition) UnmarshalJSON(data []byte) error {
-	var err error
-	// try to unmarshal JSON data into PostConditionFungible
-	err = json.Unmarshal(data, &dst.PostConditionFungible)
-	if err == nil {
-		jsonPostConditionFungible, _ := json.Marshal(dst.PostConditionFungible)
-		if string(jsonPostConditionFungible) == "{}" { // empty struct
-			dst.PostConditionFungible = nil
-		} else {
-			return nil // data stored in dst.PostConditionFungible, return on the first match
-		}
-	} else {
-		dst.PostConditionFungible = nil
+	var discriminator struct {
+		Type string `json:"type"`
+	}
+	if err := json.Unmarshal(data, &discriminator); err != nil {
+		return err
 	}
 
-	// try to unmarshal JSON data into PostConditionNonFungible
-	err = json.Unmarshal(data, &dst.PostConditionNonFungible)
-	if err == nil {
-		jsonPostConditionNonFungible, _ := json.Marshal(dst.PostConditionNonFungible)
-		if string(jsonPostConditionNonFungible) == "{}" { // empty struct
-			dst.PostConditionNonFungible = nil
-		} else {
-			return nil // data stored in dst.PostConditionNonFungible, return on the first match
-		}
-	} else {
-		dst.PostConditionNonFungible = nil
-	}
+	dst.PostConditionFungible = nil
+	dst.PostConditionNonFungible = nil
+	dst.PostConditionPox = nil
+	dst.PostConditionStaking = nil
+	dst.PostConditionStx = nil
 
-	// try to unmarshal JSON data into PostConditionStx
-	err = json.Unmarshal(data, &dst.PostConditionStx)
-	if err == nil {
-		jsonPostConditionStx, _ := json.Marshal(dst.PostConditionStx)
-		if string(jsonPostConditionStx) == "{}" { // empty struct
-			dst.PostConditionStx = nil
-		} else {
-			return nil // data stored in dst.PostConditionStx, return on the first match
-		}
-	} else {
-		dst.PostConditionStx = nil
+	switch discriminator.Type {
+	case "fungible":
+		dst.PostConditionFungible = &PostConditionFungible{}
+		return json.Unmarshal(data, dst.PostConditionFungible)
+	case "non_fungible":
+		dst.PostConditionNonFungible = &PostConditionNonFungible{}
+		return json.Unmarshal(data, dst.PostConditionNonFungible)
+	case "pox":
+		dst.PostConditionPox = &PostConditionPox{}
+		return json.Unmarshal(data, dst.PostConditionPox)
+	case "staking":
+		dst.PostConditionStaking = &PostConditionStaking{}
+		return json.Unmarshal(data, dst.PostConditionStaking)
+	case "stx":
+		dst.PostConditionStx = &PostConditionStx{}
+		return json.Unmarshal(data, dst.PostConditionStx)
+	default:
+		return fmt.Errorf("unknown post condition type %q in anyOf(PostCondition)", discriminator.Type)
 	}
-
-	// try to unmarshal JSON data into PostConditionPox
-	err = json.Unmarshal(data, &dst.PostConditionPox)
-	if err == nil {
-		jsonPostConditionPox, _ := json.Marshal(dst.PostConditionPox)
-		if string(jsonPostConditionPox) == "{}" { // empty struct
-			dst.PostConditionPox = nil
-		} else {
-			return nil // data stored in dst.PostConditionPox, return on the first match
-		}
-	} else {
-		dst.PostConditionPox = nil
-	}
-
-	return fmt.Errorf("data failed to match schemas in anyOf(PostCondition)")
 }
 
 // Marshal data from the first non-nil pointers in the struct to JSON
@@ -83,6 +64,10 @@ func (src *PostCondition) MarshalJSON() ([]byte, error) {
 
 	if src.PostConditionPox != nil {
 		return json.Marshal(&src.PostConditionPox)
+	}
+
+	if src.PostConditionStaking != nil {
+		return json.Marshal(&src.PostConditionStaking)
 	}
 
 	if src.PostConditionStx != nil {

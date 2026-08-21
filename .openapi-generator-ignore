@@ -21,3 +21,9 @@
 #docs/*.md
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
+
+# The PostCondition union is maintained by hand: its variants are dispatched on
+# the "type" field, which the generator's anyOf output does not do.
+stacks/models/model_post_condition.go
+stacks/models/model_post_condition_pox.go
+stacks/models/model_post_condition_staking.go
